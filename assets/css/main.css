@@ -2309,101 +2309,59 @@ input, select, textarea {
 /* Header */
 
 	@-moz-keyframes reveal-header {
-		0% {
-			top: -5em;
-		}
-
-		100% {
-			top: 0;
-		}
+		0% { top: -5em; }
+		100% { top: 0; }
 	}
-
 	@-webkit-keyframes reveal-header {
-		0% {
-			top: -5em;
-		}
-
-		100% {
-			top: 0;
-		}
+		0% { top: -5em; }
+		100% { top: 0; }
 	}
-
 	@-ms-keyframes reveal-header {
-		0% {
-			top: -5em;
-		}
-
-		100% {
-			top: 0;
-		}
+		0% { top: -5em; }
+		100% { top: 0; }
 	}
-
 	@keyframes reveal-header {
-		0% {
-			top: -5em;
-		}
-
-		100% {
-			top: 0;
-		}
+		0% { top: -5em; }
+		100% { top: 0; }
 	}
 
-	
-#header.reveal,
-#header.alt {
-    background-color: var(--color-fondo) !important;
-    border-bottom: solid 1px var(--color-borde);
-    box-shadow: 0 2px 8px var(--color-sombra) !important;
-}
-
-/* Unificar el fondo, desenfoque y sombra para CUALQUIER estado del menú (inicio, alt y reveal) */
-#header,
-#header.alt,
-#header.reveal {
-    background: rgba(36, 20, 11, 0.88) !important; /* Fondo oscuro institucional / o usa var(--color-fondo) si prefieres claro */
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    box-shadow: 0 2px 8px var(--color-sombra) !important;
-    position: fixed !important;
-    top: 0 !important;
-    width: 100% !important;
-}
-
-/* Asegurar que el texto y los enlaces del menú siempre tengan buen contraste y visibilidad */
-#header nav ul li a, 
-#header h1 a {
-    color: var(--color-blanco) !important;
-}
-
-#header nav ul li.current > a,
-#header nav ul li:hover > a {
-    color: var(--color-enfoque) !important;
-}
-
-#header nav ul li a, 
-#header h1 a {
-    color: var(--color-texto) !important;
-}
-
-	#header {
-		background: var(--color-blanco) !important;
-		border-bottom: solid 1px var(--color-borde);
-		box-shadow: 0 1px 2px 0 var(--color-sombra);
-		color: inherit;
+	/* Unificación absoluta para que el menú NUNCA salte, se mueva ni pierda el fondo */
+	#header,
+	#header.alt,
+	#header.reveal {
+		background: rgba(36, 20, 11, 0.92) !important; /* Fondo sólido institucional */
+		backdrop-filter: blur(8px) !important;
+		-webkit-backdrop-filter: blur(8px) !important;
+		box-shadow: 0 2px 8px var(--color-sombra) !important;
+		color: var(--color-blanco) !important;
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1em 1.5em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 10000;
+		padding: 1.25em 2.5em !important; /* Padding idéntico en todo momento para evitar saltos */
+		position: fixed !important;
+		top: 0 !important;
+		width: 100% !important;
+		z-index: 10000 !important;
+	}
+
+	/* Desactivar la animación brusca de desplazamiento de la plantilla que causa el parpadeo */
+	#header.reveal {
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
 	}
 
 		#header h1 {
 			font-weight: 900;
 			margin: 0;
 		}
+
+			#header h1 a {
+				color: var(--color-blanco) !important;
+				text-decoration: none;
+				border: 0;
+			}
 
 			#header h1 span {
 				font-weight: 300;
@@ -2412,9 +2370,9 @@ input, select, textarea {
 		#header nav {
 			letter-spacing: 0.075em;
 			position: absolute;
-			right: 1.5em;
+			right: 2.5em;
 			text-transform: uppercase;
-			top: 0.75em;
+			top: 1.25em;
 		}
 
 			#header nav ul {
@@ -2434,7 +2392,7 @@ input, select, textarea {
 
 					#header nav ul li a {
 						border: solid 1px var(--color-transparente);
-						color: inherit;
+						color: var(--color-blanco) !important;
 						display: inline-block;
 						line-height: 1em;
 						padding: 0.6em 0.75em;
@@ -2466,56 +2424,24 @@ input, select, textarea {
 							text-transform: none !important;
 							font-family: 'Font Awesome 5 Free';
 							font-weight: 900;
-						}
-
-						#header nav ul li.submenu > a:before {
 							content: '\f107';
 							margin-right: 0.65em;
 						}
 
-					#header nav ul li.active > a, #header nav ul li:hover > a {
+					#header nav ul li.active > a, 
+					#header nav ul li:hover > a {
 						-moz-transition: all 0.2s ease-in-out;
 						-webkit-transition: all 0.2s ease-in-out;
 						-ms-transition: all 0.2s ease-in-out;
 						transition: all 0.2s ease-in-out;
-						background: var(--color-hover);
+						background: var(--color-hover-claro) !important;
+						color: var(--color-enfoque) !important;
 					}
 
 					#header nav ul li.current > a {
 						font-weight: 900;
+						color: var(--color-enfoque) !important;
 					}
-
-		#header.reveal {
-			-moz-animation: reveal-header 0.5s;
-			-webkit-animation: reveal-header 0.5s;
-			-ms-animation: reveal-header 0.5s;
-			animation: reveal-header 0.5s;
-		}
-
-		#header.alt {
-			-moz-animation: none;
-			-webkit-animation: none;
-			-ms-animation: none;
-			animation: none;
-			background: var(--color-nav-alt-bg);
-			backdrop-filter: blur(8px); /* Efecto de desenfoque moderno */
-			box-shadow: 0 1px 3px 0 var(--color-sombra);
-			color: var(--color-blanco);
-			padding: 1.5em 2.5em;
-			position: fixed;
-			width: 100%;
-			top: 0;
-			z-index: 10000;
-		}
-
-			#header.alt nav {
-				right: 2.5em;
-				top: 1.75em;
-			}
-
-				#header.alt nav ul li.active > a, #header.alt nav ul li:hover > a {
-					border: solid 1px;
-				}
 
 /* Dropotron */
 
