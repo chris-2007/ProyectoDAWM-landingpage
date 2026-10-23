@@ -2348,6 +2348,20 @@ input, select, textarea {
 		}
 	}
 
+	
+#header.reveal,
+#header.alt {
+    background-color: var(--color-fondo) !important;
+    border-bottom: solid 1px var(--color-borde);
+    box-shadow: 0 2px 8px var(--color-sombra) !important;
+}
+
+
+#header nav ul li a, 
+#header h1 a {
+    color: var(--color-texto) !important;
+}
+
 	#header {
 		background: var(--color-blanco) !important;
 		border-bottom: solid 1px var(--color-borde);
