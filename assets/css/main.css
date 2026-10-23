@@ -2349,7 +2349,8 @@ input, select, textarea {
 	}
 
 	#header {
-		background: var(--color-blanco);
+		background: var(--color-blanco) !important;
+		border-bottom: solid 1px var(--color-borde);
 		box-shadow: 0 1px 2px 0 var(--color-sombra);
 		color: inherit;
 		cursor: default;
