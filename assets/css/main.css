@@ -2356,6 +2356,29 @@ input, select, textarea {
     box-shadow: 0 2px 8px var(--color-sombra) !important;
 }
 
+/* Unificar el fondo, desenfoque y sombra para CUALQUIER estado del menú (inicio, alt y reveal) */
+#header,
+#header.alt,
+#header.reveal {
+    background: rgba(36, 20, 11, 0.88) !important; /* Fondo oscuro institucional / o usa var(--color-fondo) si prefieres claro */
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    box-shadow: 0 2px 8px var(--color-sombra) !important;
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+}
+
+/* Asegurar que el texto y los enlaces del menú siempre tengan buen contraste y visibilidad */
+#header nav ul li a, 
+#header h1 a {
+    color: var(--color-blanco) !important;
+}
+
+#header nav ul li.current > a,
+#header nav ul li:hover > a {
+    color: var(--color-enfoque) !important;
+}
 
 #header nav ul li a, 
 #header h1 a {
