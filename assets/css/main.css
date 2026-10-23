@@ -2306,45 +2306,25 @@ input, select, textarea {
 			padding: 4em;
 		}
 
-/* Header */
-
-	@-moz-keyframes reveal-header {
-		0% { top: -5em; }
-		100% { top: 0; }
-	}
-	@-webkit-keyframes reveal-header {
-		0% { top: -5em; }
-		100% { top: 0; }
-	}
-	@-ms-keyframes reveal-header {
-		0% { top: -5em; }
-		100% { top: 0; }
-	}
-	@keyframes reveal-header {
-		0% { top: -5em; }
-		100% { top: 0; }
-	}
-
-	/* Unificación absoluta para que el menú NUNCA salte, se mueva ni pierda el fondo */
+/* Header - Fondo claro elegante y alto contraste */
 	#header,
 	#header.alt,
 	#header.reveal {
-		background: rgba(36, 20, 11, 0.92) !important; /* Fondo sólido institucional */
-		backdrop-filter: blur(8px) !important;
-		-webkit-backdrop-filter: blur(8px) !important;
+		background: var(--color-fondo) !important; /* Tono crema/marfil institucional */
+		border-bottom: solid 1px var(--color-borde) !important;
 		box-shadow: 0 2px 8px var(--color-sombra) !important;
-		color: var(--color-blanco) !important;
+		color: var(--color-texto) !important;
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1.25em 2.5em !important; /* Padding idéntico en todo momento para evitar saltos */
+		padding: 1.25em 2.5em !important;
 		position: fixed !important;
 		top: 0 !important;
 		width: 100% !important;
 		z-index: 10000 !important;
 	}
 
-	/* Desactivar la animación brusca de desplazamiento de la plantilla que causa el parpadeo */
+	/* Desactivar la animación de desplazamiento para evitar saltos */
 	#header.reveal {
 		-moz-animation: none !important;
 		-webkit-animation: none !important;
@@ -2358,12 +2338,13 @@ input, select, textarea {
 		}
 
 			#header h1 a {
-				color: var(--color-blanco) !important;
+				color: var(--color-texto) !important;
 				text-decoration: none;
 				border: 0;
 			}
 
 			#header h1 span {
+				color: var(--color-enlace) !important;
 				font-weight: 300;
 			}
 
@@ -2392,7 +2373,7 @@ input, select, textarea {
 
 					#header nav ul li a {
 						border: solid 1px var(--color-transparente);
-						color: var(--color-blanco) !important;
+						color: var(--color-texto) !important;
 						display: inline-block;
 						line-height: 1em;
 						padding: 0.6em 0.75em;
@@ -2434,207 +2415,14 @@ input, select, textarea {
 						-webkit-transition: all 0.2s ease-in-out;
 						-ms-transition: all 0.2s ease-in-out;
 						transition: all 0.2s ease-in-out;
-						background: var(--color-hover-claro) !important;
-						color: var(--color-enfoque) !important;
+						background: var(--color-hover) !important;
+						color: var(--color-enlace) !important;
 					}
 
 					#header nav ul li.current > a {
 						font-weight: 900;
-						color: var(--color-enfoque) !important;
+						color: var(--color-enlace) !important;
 					}
-
-/* Dropotron */
-
-	.dropotron {
-		list-style: none;
-		padding-left: 0;
-		background: var(--color-blanco);
-		box-shadow: 0 1px 2px 0 var(--color-sombra);
-		line-height: 2.25em;
-		min-width: 13em;
-		padding: 1em 0;
-		text-transform: uppercase;
-		margin-top: calc(-1em + 1px);
-	}
-
-		.dropotron.level-0 {
-			font-size: 0.7em;
-			font-weight: 400;
-			margin-top: 1.5em;
-		}
-
-			.dropotron.level-0:before {
-				border-bottom: solid 0.5em var(--color-blanco);
-				border-left: solid 0.5em var(--color-transparente);
-				border-right: solid 0.5em var(--color-transparente);
-				content: '';
-				left: 0.75em;
-				position: absolute;
-				top: -0.45em;
-			}
-
-		.dropotron > li {
-			border-top: solid 1px var(--color-borde);
-			padding-left: 0;
-		}
-
-			.dropotron > li > a {
-				-moz-transition: none;
-				-webkit-transition: none;
-				-ms-transition: none;
-				transition: none;
-				color: inherit;
-				text-decoration: none;
-				padding: 0 1em;
-				border: 0;
-			}
-
-			.dropotron > li:hover > a {
-				background: var(--color-enfoque);
-				color: var(--color-blanco);
-			}
-
-			.dropotron > li:first-child {
-				border-top: 0;
-			}
-
-/* Banner */
-
-	@-moz-keyframes reveal-banner {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes reveal-banner {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes reveal-banner {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes reveal-banner {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	#banner {
-		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: var(--color-banner);
-		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: bottom left, bottom right, top left, top center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
-		color: var(--color-blanco);
-		cursor: default;
-		padding: 6em 0;
-		text-align: center;
-	}
-
-		#banner .inner {
-			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
-			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
-			animation: reveal-banner 1s 0.25s ease-in-out;
-			-moz-animation-fill-mode: forwards;
-			-webkit-animation-fill-mode: forwards;
-			-ms-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			background: var(--color-banner-overlay);
-			color: var(--color-blanco);
-			display: inline-block;
-			opacity: 0;
-			padding: 3em;
-			text-align: center;
-		}
-
-			#banner .inner header {
-				display: inline-block;
-				border-bottom: solid 2px;
-				border-top: solid 2px;
-				margin: 0 0 2em 0;
-				padding: 3px 0 3px 0;
-			}
-
-				#banner .inner header h2 {
-					border-bottom: solid 2px;
-					border-top: solid 2px;
-					font-size: 2.5em;
-					font-weight: 900;
-					letter-spacing: 0.2em;
-					margin: 0;
-					padding-left: 0.05em;
-					position: relative;
-					text-transform: uppercase;
-				}
-
-			#banner .inner p {
-				letter-spacing: 0.1em;
-				margin: 0;
-				text-transform: uppercase;
-			}
-
-				#banner .inner p a {
-					color: inherit;
-					font-weight: 400;
-					text-decoration: none;
-				}
-
-			#banner .inner footer {
-				margin: 2em 0 0 0;
-			}
-
-/* Main */
-
-	#main {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
-		background-position: top left, top right, bottom left, bottom right;
-		background-repeat: no-repeat;
-		background-size: 25em;
-		padding: 7em 0;
-	}
-
-		#main > :last-child {
-			margin-bottom: 0;
-		}
-
-		#main .sidebar section {
-			border-top: solid 1px var(--color-borde);
-			margin: 3em 0 0 0;
-			padding: 3em 0 0 0;
-		}
-
-			#main .sidebar section:first-child {
-				border-top: 0;
-				padding-top: 0;
-				margin-top: 0;
-			}
-
-	body.index #main {
-		padding-top: 5em;
-	}
 
 /* CTA */
 
