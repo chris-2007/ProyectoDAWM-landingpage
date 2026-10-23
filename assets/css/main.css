@@ -51,6 +51,11 @@
     --color-hover: rgba(200, 157, 52, 0.12);      /* Sombra/overlay al pasar el cursor (dorado tenue) */
     --color-hover-claro: rgba(255, 255, 255, 0.15);
     --color-transparente: transparent;
+
+	/* --- Nuevas Variables Exclusivas para la Barra de Navegación --- */
+    --color-navbar-bg: #22120A;      /* Fondo oscuro cacao sólido y elegante */
+    --color-navbar-texto: #FDFBF7;   /* Texto crema claro de alta visibilidad */
+    --color-navbar-activo: #C89D34;  /* Dorado/Oro institucional para hover y selección */
 }
 
 }
@@ -2306,14 +2311,31 @@ input, select, textarea {
 			padding: 4em;
 		}
 
-/* Header - Fondo claro elegante y alto contraste */
+/* Header - Estilo unificado con las nuevas variables */
+	@-moz-keyframes reveal-header {
+		0% { top: -5em; }
+		100% { top: 0; }
+	}
+	@-webkit-keyframes reveal-header {
+		0% { top: -5em; }
+		100% { top: 0; }
+	}
+	@-ms-keyframes reveal-header {
+		0% { top: -5em; }
+		100% { top: 0; }
+	}
+	@keyframes reveal-header {
+		0% { top: -5em; }
+		100% { top: 0; }
+	}
+
 	#header,
 	#header.alt,
 	#header.reveal {
-		background: var(--color-fondo) !important; /* Tono crema/marfil institucional */
+		background: var(--color-navbar-bg) !important;
 		border-bottom: solid 1px var(--color-borde) !important;
 		box-shadow: 0 2px 8px var(--color-sombra) !important;
-		color: var(--color-texto) !important;
+		color: var(--color-navbar-texto) !important;
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
@@ -2324,7 +2346,6 @@ input, select, textarea {
 		z-index: 10000 !important;
 	}
 
-	/* Desactivar la animación de desplazamiento para evitar saltos */
 	#header.reveal {
 		-moz-animation: none !important;
 		-webkit-animation: none !important;
@@ -2338,13 +2359,13 @@ input, select, textarea {
 		}
 
 			#header h1 a {
-				color: var(--color-texto) !important;
+				color: var(--color-navbar-texto) !important;
 				text-decoration: none;
 				border: 0;
 			}
 
 			#header h1 span {
-				color: var(--color-enlace) !important;
+				color: var(--color-navbar-activo) !important;
 				font-weight: 300;
 			}
 
@@ -2373,21 +2394,11 @@ input, select, textarea {
 
 					#header nav ul li a {
 						border: solid 1px var(--color-transparente);
-						color: var(--color-texto) !important;
+						color: var(--color-navbar-texto) !important;
 						display: inline-block;
 						line-height: 1em;
 						padding: 0.6em 0.75em;
 						text-decoration: none;
-					}
-
-					#header nav ul li input[type="button"],
-					#header nav ul li input[type="submit"],
-					#header nav ul li input[type="reset"],
-					#header nav ul li button,
-					#header nav ul li .button {
-						font-size: 1em;
-						min-width: 0;
-						width: auto;
 					}
 
 					#header nav ul li.submenu > a {
@@ -2415,15 +2426,14 @@ input, select, textarea {
 						-webkit-transition: all 0.2s ease-in-out;
 						-ms-transition: all 0.2s ease-in-out;
 						transition: all 0.2s ease-in-out;
-						background: var(--color-hover) !important;
-						color: var(--color-enlace) !important;
+						background: var(--color-hover-claro) !important;
+						color: var(--color-navbar-activo) !important;
 					}
 
 					#header nav ul li.current > a {
 						font-weight: 900;
-						color: var(--color-enlace) !important;
+						color: var(--color-navbar-activo) !important;
 					}
-
 /* CTA */
 
 	#cta {
