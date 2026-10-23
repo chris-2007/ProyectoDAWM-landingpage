@@ -2434,6 +2434,200 @@ input, select, textarea {
 						font-weight: 900;
 						color: var(--color-navbar-activo) !important;
 					}
+
+
+/* Dropotron */
+
+	.dropotron {
+		list-style: none;
+		padding-left: 0;
+		background: var(--color-blanco);
+		box-shadow: 0 1px 2px 0 var(--color-sombra);
+		line-height: 2.25em;
+		min-width: 13em;
+		padding: 1em 0;
+		text-transform: uppercase;
+		margin-top: calc(-1em + 1px);
+	}
+
+		.dropotron.level-0 {
+			font-size: 0.7em;
+			font-weight: 400;
+			margin-top: 1.5em;
+		}
+
+			.dropotron.level-0:before {
+				border-bottom: solid 0.5em var(--color-blanco);
+				border-left: solid 0.5em var(--color-transparente);
+				border-right: solid 0.5em var(--color-transparente);
+				content: '';
+				left: 0.75em;
+				position: absolute;
+				top: -0.45em;
+			}
+
+		.dropotron > li {
+			border-top: solid 1px var(--color-borde);
+			padding-left: 0;
+		}
+
+			.dropotron > li > a {
+				-moz-transition: none;
+				-webkit-transition: none;
+				-ms-transition: none;
+				transition: none;
+				color: inherit;
+				text-decoration: none;
+				padding: 0 1em;
+				border: 0;
+			}
+
+			.dropotron > li:hover > a {
+				background: var(--color-enfoque);
+				color: var(--color-blanco);
+			}
+
+			.dropotron > li:first-child {
+				border-top: 0;
+			}
+
+/* Banner */
+
+	@-moz-keyframes reveal-banner {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes reveal-banner {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-ms-keyframes reveal-banner {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes reveal-banner {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	#banner {
+		background-attachment: scroll, scroll, scroll, fixed;
+		background-color: var(--color-banner);
+		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-position: bottom left, bottom right, top left, top center;
+		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+		background-size: 25em, 25em, auto, cover;
+		color: var(--color-blanco);
+		cursor: default;
+		padding: 6em 0;
+		text-align: center;
+	}
+
+		#banner .inner {
+			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
+			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
+			animation: reveal-banner 1s 0.25s ease-in-out;
+			-moz-animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			background: var(--color-banner-overlay);
+			color: var(--color-blanco);
+			display: inline-block;
+			opacity: 0;
+			padding: 3em;
+			text-align: center;
+		}
+
+			#banner .inner header {
+				display: inline-block;
+				border-bottom: solid 2px;
+				border-top: solid 2px;
+				margin: 0 0 2em 0;
+				padding: 3px 0 3px 0;
+			}
+
+				#banner .inner header h2 {
+					border-bottom: solid 2px;
+					border-top: solid 2px;
+					font-size: 2.5em;
+					font-weight: 900;
+					letter-spacing: 0.2em;
+					margin: 0;
+					padding-left: 0.05em;
+					position: relative;
+					text-transform: uppercase;
+				}
+
+			#banner .inner p {
+				letter-spacing: 0.1em;
+				margin: 0;
+				text-transform: uppercase;
+			}
+
+				#banner .inner p a {
+					color: inherit;
+					font-weight: 400;
+					text-decoration: none;
+				}
+
+			#banner .inner footer {
+				margin: 2em 0 0 0;
+			}
+
+/* Main */
+
+	#main {
+		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
+		background-position: top left, top right, bottom left, bottom right;
+		background-repeat: no-repeat;
+		background-size: 25em;
+		padding: 7em 0;
+	}
+
+		#main > :last-child {
+			margin-bottom: 0;
+		}
+
+		#main .sidebar section {
+			border-top: solid 1px var(--color-borde);
+			margin: 3em 0 0 0;
+			padding: 3em 0 0 0;
+		}
+
+			#main .sidebar section:first-child {
+				border-top: 0;
+				padding-top: 0;
+				margin-top: 0;
+			}
+
+	body.index #main {
+		padding-top: 5em;
+	}
 /* CTA */
 
 	#cta {
