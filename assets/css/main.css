@@ -3355,3 +3355,10 @@ input, select, textarea {
     background: #4A2E1B !important; /* Tono cacao armónico */
     color: var(--color-blanco) !important;
 }
+
+.icon.brands.fa-facebook-f {
+    background: none !important;
+    color: #8c4a27 !important; /* Tono marrón cálido que combina con TikTok e Instagram */
+    font-size: 1.25em;         /* Ajusta el tamaño para que guarde proporción */
+    box-shadow: none !important;
+}
