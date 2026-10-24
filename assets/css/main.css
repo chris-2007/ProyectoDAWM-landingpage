@@ -25,7 +25,7 @@
     /* --- Capas y Fondos de Secciones --- */
     --color-banner-overlay: rgba(30, 15, 8, 0.55); /* Capa oscura cálida sobre imágenes */
     --color-cta: #4A2E1B;              /* Marrón cacao mediano para la barra de Call to Action */
-    --color-footer: #2A180E;           /* Marrón cacao extra oscuro para el pie de página */
+    --color-footer: #4A2E1B;           /* Marrón cacao extra oscuro para el pie de página */
     --color-tabla-encabezado: #5C3D2E;  /* Tono cacao para encabezados de tablas */
     
     /* --- Navegación (Header y Menú) --- */
@@ -2646,29 +2646,31 @@ input, select, textarea {
 			margin-bottom: 2em;
 		}
 
-/* Footer */
-
+/* Footer - Transición suave y texto legible */
 	#footer {
-		background: var(--color-footer);
-		color: var(--color-texto);
-		padding: 5em 5em 10em 5em;
+		background: var(--color-footer) !important;
+		color: rgba(253, 251, 247, 0.85) !important; /* Texto crema claro de alta visibilidad */
+		padding: 5em 5em 8em 5em;
 		text-align: center;
+		border-top: solid 1px rgba(200, 157, 52, 0.15); /* Una línea dorada muy fina y elegante de separación */
 	}
 
 		#footer .copyright {
 			font-size: 0.8em;
-			line-height: 1em;
+			line-height: 1.5em;
+			color: rgba(253, 251, 247, 0.7) !important;
 		}
 
 			#footer .copyright a {
-				color: inherit;
+				color: var(--color-navbar-activo) !important; /* El enlace de HTML5 UP resaltará en dorado */
+				text-decoration: underline;
 			}
 
 			#footer .copyright li {
 				display: inline-block;
 				margin-left: 1em;
 				padding-left: 1em;
-				border-left: dotted 1px;
+				border-left: dotted 1px rgba(253, 251, 247, 0.3);
 			}
 
 				#footer .copyright li:first-child {
