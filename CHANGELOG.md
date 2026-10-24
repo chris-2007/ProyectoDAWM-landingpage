@@ -1,0 +1,8 @@
+| Componente / Sección | Tipo de Ajuste | Descripción Técnica de los Cambios Realizados |
+| :--- | :--- | :--- |
+| **Menú de Navegación (`#header`)** | Corrección de UI / Estructura | • Solución de problemas de transparencia y saltos visuales al hacer *scroll* entre los estados iniciales (`.alt`) y dinámicos (`.reveal`)[cite: 1, 2, 4].<br>• Unificación de la posición fija (`position: fixed`) y el relleno (*padding*) para evitar parpadeos[cite: 4]. |
+| **Paleta y Variables CSS** | Optimización de Estilos | • Creación e implementación de variables CSS personalizadas en el archivo `main.css` para el esquema de colores institucional (Cacao & Oro) y la barra de navegación[cite: 6]. |
+| **Sección CTA de Reservas (`#cta`)** | Cohesión Visual | • Ajuste del color de fondo del bloque de reservas para unificarlo con el pie de página, eliminando contrastes bruscos y logrando una transición fluida[cite: 8]. |
+| **Pie de Página (`#footer`)** | Jerarquía y Legibilidad | • Sincronización del tono de fondo del *footer* y mejora en el contraste del texto de *copyright* para garantizar una lectura óptima[cite: 7]. |
+| **Redes Sociales (Íconos)** | Armonización Estética | • Modificación del ícono de Facebook para retirar su fondo sólido original y alinear su estilo tipográfico de forma limpia junto a los isotipos de TikTok e Instagram[cite: 9]. |
+| **Despliegue y Desempeño** | Configuración Técnica | • Verificación de la estructura de archivos en el repositorio y actualización continua para la correcta visualización en GitHub Pages[cite: 1]. |
