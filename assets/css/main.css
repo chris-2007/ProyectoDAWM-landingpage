@@ -3349,3 +3349,9 @@ input, select, textarea {
 			}
 
 	}
+
+	/* Personalizar el ícono de Facebook para que combine con el footer y mantenga su animación */
+.icon.circle.fa-facebook-f {
+    background: #5A3A28 !important; /* Tono cacao armónico */
+    color: var(--color-blanco) !important;
+}
